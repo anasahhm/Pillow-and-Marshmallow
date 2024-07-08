@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillow and Marshmallow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="pillow.png" type="image/png">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="sounds/lofi-coffee-shop-night-desktop-wallpaperwaifu-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Existing content -->
+    <header>
+        <h1>Pillow and Marshmallow</h1>
+    </header>
+    <main>
+        <h2>Vibe in Air</h2>
+        <div class="controls">
+            <select id="sound-selector">
+                <option value="neighbor_practicing_violin">Violin in the Next Room</option>
+                <option value="cozy_soft_rain_under_umbrella">Rain Under My Umbrella</option>
+                <option value="rain_inside_a_car">Rain Inside a Car</option>
+                <option value="mocha">Mocha</option>
+                <option value="coffee_at_a_museum">Coffee at a Museum</option>
+                <option value="chit_chats">Chit Chats</option>
+            </select>
+            <button id="play-sound">Play Sound</button>
+            <button id="stop-sound">Stop Sound</button>
+        </div>
+        <div id="external-audio">
+            <audio controls>
+                <source id="audio-source" src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="button-group">
+            <a href="https://open.spotify.com" id="spotify-button" target="_blank">
+                <span id="spotify-button-text">Open Spotify</span>
+                <span id="current-song" style="display: none;"></span>
+            </a>
+            <div id="tip-button">
+                <button id="show-tip-options">Tip me a Feather</button>
+                <div id="tip-options">
+                    <a href="https://paypal.me/yourusername" target="_blank">Pay with PayPal</a>
+                    <a href="https://pay.google.com" target="_blank">Pay with Google Pay</a>
+                    <a href="https://applepay.com" target="_blank">Pay with Apple Pay</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
