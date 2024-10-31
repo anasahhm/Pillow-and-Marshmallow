@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Spotify Button Logic
     spotifyButton.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
+
         if (spotifyButton.classList.contains('playing')) {
             spotifyButton.classList.remove('playing');
             spotifyButtonText.textContent = 'Open Spotify';
@@ -58,8 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             spotifyButton.classList.add('playing');
             spotifyButtonText.textContent = 'Playing...';
-            currentSong.textContent = 'Current Song: [Song Title]'; // Dynamically set this based on actual song title
+            currentSong.textContent = 'Current Song: [Song Title]'; // Set dynamically if available
             currentSong.style.display = 'block';
+
+            // Open Spotify in a new tab
+            window.open('https://open.spotify.com', '_blank');
         }
     });
 });
